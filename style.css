@@ -178,10 +178,11 @@ a {
 .logo-area {
     display: flex;
     align-items: center;
+    margin-left: 2.5rem;
 }
 
 .main-logo-img {
-    height: 70px;
+    height: 80px;
     width: auto;
     transition: var(--transition-smooth);
 }
@@ -505,7 +506,7 @@ a {
 }
 
 .badge-top {
-    top: 15%;
+    top: 0%;
     right: -10%;
 }
 
@@ -1105,6 +1106,14 @@ a.contact-item:hover .contact-item-icon {
     font-weight: 800;
     color: var(--text-title);
     margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-logo-img {
+    height: 45px;
+    width: auto;
 }
 
 .footer-copyright {
