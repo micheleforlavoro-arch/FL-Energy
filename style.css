@@ -168,7 +168,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 85px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .logo-area {
@@ -177,7 +181,7 @@ a {
 }
 
 .main-logo-img {
-    height: 60px;
+    height: 70px;
     width: auto;
     transition: var(--transition-smooth);
 }
@@ -506,7 +510,7 @@ a {
 }
 
 .badge-bottom {
-    bottom: 15%;
+    bottom: 0%;
     left: -10%;
     animation-delay: 2s;
 }

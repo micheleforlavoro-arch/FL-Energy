@@ -9,27 +9,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---------------------------------------------------------
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
-    const themeIcon = themeToggleBtn.querySelector('i');
     
     // Check saved user preference or default to dark
     const savedTheme = localStorage.getItem('theme') || 'dark';
     htmlElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
     
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    if (themeToggleBtn) {
+        const themeIcon = themeToggleBtn.querySelector('i');
+        updateThemeIcon(savedTheme);
         
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
-    
-    function updateThemeIcon(theme) {
-        if (theme === 'dark') {
-            themeIcon.className = 'fa-solid fa-sun';
-        } else {
-            themeIcon.className = 'fa-solid fa-moon';
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+        
+        function updateThemeIcon(theme) {
+            if (themeIcon) {
+                if (theme === 'dark') {
+                    themeIcon.className = 'fa-solid fa-sun';
+                } else {
+                    themeIcon.className = 'fa-solid fa-moon';
+                }
+            }
         }
     }
 
@@ -40,18 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('open');
-        navMenu.classList.toggle('open');
-    });
-    
-    // Close menu when a link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            menuToggle.classList.remove('open');
-            navMenu.classList.remove('open');
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
         });
-    });
+        
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+    }
 
     // ---------------------------------------------------------
     // 3. HEADER SCROLL EFFECT & ACTIVE NAVIGATION INDICATOR
@@ -182,39 +189,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formFeedback = document.getElementById('form-feedback');
     const submitBtn = document.getElementById('submit-btn');
-    const submitBtnText = submitBtn.querySelector('span');
-    const submitBtnIcon = submitBtn.querySelector('i');
     
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if (contactForm && formFeedback && submitBtn) {
+        const submitBtnText = submitBtn.querySelector('span');
+        const submitBtnIcon = submitBtn.querySelector('i');
         
-        // Disable submit button and show loader
-        submitBtn.disabled = true;
-        submitBtnText.textContent = 'Invio in corso...';
-        submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin';
-        
-        // Hide previous feedback
-        formFeedback.className = 'form-feedback hidden';
-        
-        // Simulate Server API Request delay (1.5 seconds)
-        setTimeout(() => {
-            const formData = new FormData(contactForm);
-            const userName = formData.get('name');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
             
-            // Basic success simulation
-            formFeedback.textContent = `Grazie ${userName}, la tua richiesta è stata inviata con successo! Ti risponderemo a breve.`;
-            formFeedback.className = 'form-feedback success';
+            // Disable submit button and show loader
+            submitBtn.disabled = true;
+            if (submitBtnText) submitBtnText.textContent = 'Invio in corso...';
+            if (submitBtnIcon) submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin';
             
-            // Reset form fields
-            contactForm.reset();
+            // Hide previous feedback
+            formFeedback.className = 'form-feedback hidden';
             
-            // Restore button state
-            submitBtn.disabled = false;
-            submitBtnText.textContent = 'Invia Richiesta';
-            submitBtnIcon.className = 'fa-solid fa-paper-plane';
-            
-            // Scroll feedback into view
-            formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 1500);
-    });
+            // Simulate Server API Request delay (1.5 seconds)
+            setTimeout(() => {
+                const formData = new FormData(contactForm);
+                const userName = formData.get('name');
+                
+                // Basic success simulation
+                formFeedback.textContent = `Grazie ${userName}, la tua richiesta è stata inviata con successo! Ti risponderemo a breve.`;
+                formFeedback.className = 'form-feedback success';
+                
+                // Reset form fields
+                contactForm.reset();
+                
+                // Restore button state
+                submitBtn.disabled = false;
+                if (submitBtnText) submitBtnText.textContent = 'Invia Richiesta';
+                if (submitBtnIcon) submitBtnIcon.className = 'fa-solid fa-paper-plane';
+                
+                // Scroll feedback into view
+                formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 1500);
+        });
+    }
 });
