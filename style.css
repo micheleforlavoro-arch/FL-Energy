@@ -176,13 +176,16 @@ a {
     align-items: center;
 }
 
-.main-logo {
-    height: 60px;
+.main-logo-img {
+    height: 55px;
     width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-smooth);
 }
 
-.main-logo text {
-    transition: fill 0.3s ease;
+.main-logo-img:hover {
+    transform: scale(1.05);
 }
 
 .nav-menu {
