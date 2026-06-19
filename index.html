@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL ENERGY SRLS | Soluzioni per Energia, Impiantistica e Materiale Tecnologico</title>
+    <meta name="description" content="FL ENERGY SRLS - Partner commerciale e distributivo per imprese, installatori e professionisti nel settore energetico, elettrico e fotovoltaico a Rende (CS).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Glow Effects -->
+    <div class="glow-bg">
+        <div class="glow-sphere sphere-1"></div>
+        <div class="glow-sphere sphere-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-area" id="logo-link">
+                <!-- SVG Logo representing droplet and leaf -->
+                <svg class="main-logo" viewBox="0 0 250 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Droplet & Leaf Logo Emblem -->
+                    <g transform="translate(10, 10)">
+                        <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.1"/>
+                        <!-- Droplet (Blue/Left) -->
+                        <path d="M30 6 C20 18 10 26 10 36 A20 20 0 0 0 30 54 A20 20 0 0 0 30 6 Z" fill="url(#dropletGrad)"/>
+                        <!-- Leaf (Green/Right) -->
+                        <path d="M30 14 C40 18 48 28 48 38 A18 18 0 0 1 30 54 C35 44 32 30 30 14 Z" fill="url(#leafGrad)"/>
+                        <!-- Leaf Details -->
+                        <path d="M30 20 Q35 34 32 48" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+                        <path d="M32 30 Q38 34 38 34" stroke="#ffffff" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.4"/>
+                        <path d="M31 38 Q37 40 37 40" stroke="#ffffff" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.4"/>
+                    </g>
+                    <!-- Text Logo -->
+                    <text x="80" y="38" font-family="'Outfit', sans-serif" font-weight="800" font-size="24" fill="var(--text-title)" letter-spacing="1">FL ENERGY</text>
+                    <text x="80" y="55" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="var(--text-muted)" letter-spacing="1.5">SOLUZIONI DI CLIMATIZZAZIONE</text>
+                    
+                    <!-- Gradients -->
+                    <defs>
+                        <linearGradient id="dropletGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3b82f6" />
+                            <stop offset="100%" stop-color="#1d4ed8" />
+                        </linearGradient>
+                        <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#10b981" />
+                            <stop offset="100%" stop-color="#047857" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
+                <a href="#settori" class="nav-link">Settori</a>
+                <a href="#punti-forza" class="nav-link">Punti di Forza</a>
+                <a href="#contatti" class="nav-link">Contatti</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contatti" class="btn btn-primary btn-sm btn-header">Contattaci</a>
+                <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Apri menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge fade-in">Transizione Energetica & Innovazione</div>
+                    <h1 class="hero-title fade-in delay-1">
+                        Soluzioni per Energia, <br>
+                        <span class="text-gradient">Impiantistica</span> & <br>
+                        Materiale Tecnologico
+                    </h1>
+                    <p class="hero-subtitle fade-in delay-2">
+                        Partner commerciale e distributivo di fiducia per imprese, installatori, professionisti e operatori del settore energetico.
+                    </p>
+                    <div class="hero-actions fade-in delay-3">
+                        <a href="#settori" class="btn btn-primary">I Nostri Settori</a>
+                        <a href="#chi-siamo" class="btn btn-secondary">Scopri Chi Siamo</a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in-right">
+                    <div class="visual-card">
+                        <!-- Custom Dynamic SVG Illustration showing energy grids and green tech -->
+                        <svg class="hero-illustration" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(59, 130, 246, 0.4)" />
+                                    <stop offset="100%" stop-color="rgba(29, 78, 216, 0.05)" />
+                                </linearGradient>
+                                <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(16, 185, 129, 0.4)" />
+                                    <stop offset="100%" stop-color="rgba(4, 120, 87, 0.05)" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Network nodes and grids -->
+                            <circle cx="250" cy="250" r="180" stroke="var(--border-color)" stroke-width="1" stroke-dasharray="5 5" opacity="0.3"/>
+                            <circle cx="250" cy="250" r="120" stroke="var(--border-color)" stroke-width="1" opacity="0.2"/>
+                            
+                            <!-- Hexagons representing technology modules -->
+                            <polygon points="250,70 354,130 354,250 250,310 146,250 146,130" fill="url(#blueGrad)" stroke="var(--primary-color)" stroke-width="1.5"/>
+                            <polygon points="350,230 436,280 436,380 350,430 264,380 264,280" fill="url(#greenGrad)" stroke="var(--secondary-color)" stroke-width="1.5"/>
+                            
+                            <!-- Central Glow Element representing clean solar/droplet energy -->
+                            <circle cx="250" cy="250" r="60" fill="var(--card-bg)" stroke="var(--border-color)" stroke-width="2"/>
+                            
+                            <!-- Sun and Leaf inside Center -->
+                            <path d="M250 215 A 35 35 0 0 1 285 250 A 35 35 0 0 1 250 285 A 35 35 0 0 1 215 250 A 35 35 0 0 1 250 215 Z" fill="rgba(59, 130, 246, 0.1)"/>
+                            <path d="M250 225 C265 225 275 235 275 250 C275 265 265 275 250 275 C235 275 225 265 225 250 C225 235 235 225 250 225 Z" fill="rgba(16, 185, 129, 0.2)"/>
+                            
+                            <!-- Connection nodes -->
+                            <circle cx="250" cy="70" r="6" fill="var(--primary-color)"/>
+                            <circle cx="354" cy="130" r="6" fill="var(--secondary-color)"/>
+                            <circle cx="354" cy="250" r="6" fill="var(--primary-color)"/>
+                            <circle cx="250" cy="310" r="6" fill="var(--secondary-color)"/>
+                            <circle cx="146" cy="250" r="6" fill="var(--primary-color)"/>
+                            <circle cx="146" cy="130" r="6" fill="var(--secondary-color)"/>
+                        </svg>
+                        
+                        <div class="floating-badge badge-top">
+                            <i class="fa-solid fa-solar-panel text-secondary"></i>
+                            <div>
+                                <span class="badge-title">Fotovoltaico</span>
+                                <span class="badge-desc">Moduli & Inverter</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom">
+                            <i class="fa-solid fa-leaf text-primary"></i>
+                            <div>
+                                <span class="badge-title">Efficienza</span>
+                                <span class="badge-desc">Zero Emissioni</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chi Siamo & Profilo Aziendale -->
+        <section id="chi-siamo" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Profilo Aziendale</span>
+                    <h2 class="section-title">Chi Siamo</h2>
+                    <p class="section-description">
+                        FL ENERGY SRLS è una società dinamica e specializzata, nata a Gennaio 2023 a Rende (CS), focalizzata sulla commercializzazione e distribuzione di soluzioni tecnologiche all'avanguardia per l'efficienza energetica.
+                    </p>
+                </div>
+
+                <div class="grid grid-2 chi-siamo-grid">
+                    <!-- Left: Text and Identity -->
+                    <div class="card glass-card chi-siamo-main scroll-animate">
+                        <h3>La Nostra Missione</h3>
+                        <p class="mission-text">
+                            "Supportare la transizione energetica e l'innovazione tecnologica attraverso la fornitura di prodotti e soluzioni ad alto valore aggiunto."
+                        </p>
+                        <p>
+                            Operiamo come partner commerciale e distributivo strategico. Offriamo a imprese, installatori e professionisti del settore le migliori tecnologie disponibili sul mercato per supportarli nella realizzazione di progetti sostenibili e ad alto risparmio energetico.
+                        </p>
+                        
+                        <!-- Governance Info -->
+                        <div class="governance-box">
+                            <div class="governance-avatar">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="governance-details">
+                                <span class="gov-title">Amministratore Unico</span>
+                                <span class="gov-name">Luca De Rose</span>
+                                <span class="gov-desc">Gestione diretta, flessibile e processi decisionali rapidi.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Info cards & Key stats -->
+                    <div class="chi-siamo-details">
+                        <!-- Corporate info grid -->
+                        <div class="grid grid-2 stats-container">
+                            <div class="card stat-card scroll-animate">
+                                <span class="stat-number" data-target="2023">0</span>
+                                <span class="stat-label">Anno Costituzione</span>
+                            </div>
+                            <div class="card stat-card scroll-animate">
+                                <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                                <span class="stat-label">Affidabilità Commerciale</span>
+                            </div>
+                        </div>
+
+                        <!-- Legal Info Card -->
+                        <div class="card glass-card legal-card scroll-animate">
+                            <h3>Informazioni Societarie</h3>
+                            <ul class="legal-list">
+                                <li>
+                                    <i class="fa-solid fa-building text-primary"></i>
+                                    <div>
+                                        <strong>Denominazione:</strong>
+                                        <span>FL ENERGY SRLS</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-balance-scale text-primary"></i>
+                                    <div>
+                                        <strong>Forma Giuridica:</strong>
+                                        <span>Società a Responsabilità Limitata Semplificata</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-map-location-dot text-primary"></i>
+                                    <div>
+                                        <strong>Sede Legale:</strong>
+                                        <span>Piazzale Kennedy, 5 - 87036 Rende (CS)</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-certificate text-primary"></i>
+                                    <div>
+                                        <strong>Registro Imprese:</strong>
+                                        <span>Regolarmente iscritta presso la CCIAA di Cosenza</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settori di Attività (Interactive Filterable Grid) -->
+        <section id="settori" class="section bg-light-alt">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Cosa Offriamo</span>
+                    <h2 class="section-title">Settori di Attività</h2>
+                    <p class="section-description">
+                        Un portafoglio completo di forniture e materiali tecnologici pensato per coprire ogni esigenza in ambito energetico, impiantistico ed edile.
+                    </p>
+                </div>
+
+                <!-- Sector Filters -->
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">Tutti i Settori</button>
+                    <button class="filter-btn" data-filter="energia">Energia & Fotovoltaico</button>
+                    <button class="filter-btn" data-filter="elettrico">Materiale Elettrico</button>
+                    <button class="filter-btn" data-filter="impiantistica">Impiantistica</button>
+                    <button class="filter-btn" data-filter="edilizia">Edilizia & Altro</button>
+                </div>
+
+                <!-- Sector Cards Grid -->
+                <div class="grid grid-3 sectors-grid" id="sectors-grid">
+                    <!-- Card 1: Fotovoltaico -->
+                    <div class="card sector-card scroll-animate" data-category="energia">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+                        <h3>Moduli Fotovoltaici</h3>
+                        <p>Moduli di ultima generazione ad alta efficienza per impianti residenziali, commerciali e industriali.</p>
+                        <span class="category-tag">Energia</span>
+                    </div>
+
+                    <!-- Card 2: Inverter -->
+                    <div class="card sector-card scroll-animate" data-category="energia">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-charging-station"></i>
+                        </div>
+                        <h3>Inverter Fotovoltaici</h3>
+                        <p>Inverter di stringa e con ottimizzatori dei migliori brand globali per massimizzare la resa energetica.</p>
+                        <span class="category-tag">Energia</span>
+                    </div>
+
+                    <!-- Card 3: Accumulo -->
+                    <div class="card sector-card scroll-animate" data-category="energia">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-battery-three-quarters"></i>
+                        </div>
+                        <h3>Sistemi di Accumulo</h3>
+                        <p>Batterie al litio intelligenti per stoccaggio energetico e ottimizzazione dell'autoconsumo.</p>
+                        <span class="category-tag">Energia</span>
+                    </div>
+
+                    <!-- Card 4: Quadri Elettrici -->
+                    <div class="card sector-card scroll-animate" data-category="elettrico">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-square-poll-vertical"></i>
+                        </div>
+                        <h3>Quadri Elettrici</h3>
+                        <p>Quadri di distribuzione e di protezione per sistemi fotovoltaici e per installazioni civili e industriali.</p>
+                        <span class="category-tag">Materiale Elettrico</span>
+                    </div>
+
+                    <!-- Card 5: Componentistica Elettrica -->
+                    <div class="card sector-card scroll-animate" data-category="elettrico">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+                        <h3>Componentistica Civile & Industriale</h3>
+                        <p>Fornitura completa di cavi, canalizzazioni, interruttori e accessori di cablaggio di alta qualità.</p>
+                        <span class="category-tag">Materiale Elettrico</span>
+                    </div>
+
+                    <!-- Card 6: Illuminazione & Automazione -->
+                    <div class="card sector-card scroll-animate" data-category="elettrico">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3>Illuminazione & Automazione</h3>
+                        <p>Sistemi LED a basso consumo e soluzioni di domotica avanzata per il controllo intelligente dell'edificio.</p>
+                        <span class="category-tag">Materiale Elettrico</span>
+                    </div>
+
+                    <!-- Card 7: Riscaldamento & Condizionamento -->
+                    <div class="card sector-card scroll-animate" data-category="impiantistica">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <h3>Riscaldamento & Climatizzazione</h3>
+                        <p>Pompe di calore, caldaie ibride e condizionatori ad alta efficienza energetica (classe A+++).</p>
+                        <span class="category-tag">Impiantistica</span>
+                    </div>
+
+                    <!-- Card 8: Depurazione -->
+                    <div class="card sector-card scroll-animate" data-category="impiantistica">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <h3>Sistemi di Depurazione</h3>
+                        <p>Soluzioni e prodotti tecnologici per il trattamento e la depurazione dell'acqua in ambito civile.</p>
+                        <span class="category-tag">Impiantistica</span>
+                    </div>
+
+                    <!-- Card 9: Edilizia & Forniture -->
+                    <div class="card sector-card scroll-animate" data-category="edilizia">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <h3>Forniture e Materiali Edili</h3>
+                        <p>Materiali isolanti e forniture tecniche per l'efficienza termica dell'involucro edilizio delle imprese partner.</p>
+                        <span class="category-tag">Edilizia</span>
+                    </div>
+
+                    <!-- Card 10: Special LED WALL -->
+                    <div class="card sector-card special-card scroll-animate" data-category="edilizia">
+                        <div class="sector-icon">
+                            <i class="fa-solid fa-tv"></i>
+                        </div>
+                        <h3>Vendita & Noleggio LED WALL</h3>
+                        <p>Fornitura, installazione e noleggio con finanziamento operativo e successivo riscatto di LED WALL per comunicazione visiva.</p>
+                        <span class="category-tag">Nuovo Mercato</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Punti di Forza & Visione Strategica -->
+        <section id="punti-forza" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Il Nostro Valore</span>
+                    <h2 class="section-title">Punti di Forza & Visione</h2>
+                    <p class="section-description">
+                        Perché scegliere FL ENERGY come partner commerciale per la tua attività o cantiere.
+                    </p>
+                </div>
+
+                <div class="grid grid-2 vision-grid">
+                    <!-- Left: Strengths List -->
+                    <div class="strengths-box">
+                        <div class="strength-item scroll-animate">
+                            <div class="strength-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="strength-content">
+                                <h4>Specializzazione nel Settore Energetico</h4>
+                                <p>Competenza approfondita sulle tecnologie green per offrire sempre la soluzione più idonea.</p>
+                            </div>
+                        </div>
+
+                        <div class="strength-item scroll-animate">
+                            <div class="strength-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                            <div class="strength-content">
+                                <h4>Rapidità nelle Forniture</h4>
+                                <p>Logistica e catena di distribuzione organizzate per minimizzare i tempi di attesa in cantiere.</p>
+                            </div>
+                        </div>
+
+                        <div class="strength-item scroll-animate">
+                            <div class="strength-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <div class="strength-content">
+                                <h4>Flessibilità & Approccio al Cliente</h4>
+                                <p>Affianchiamo installatori e imprese con consulenza su misura per ciascun progetto.</p>
+                            </div>
+                        </div>
+
+                        <div class="strength-item scroll-animate">
+                            <div class="strength-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="strength-content">
+                                <h4>Multicanalità (Tradizionale & Digitale)</h4>
+                                <p>Capacità di operare sia con logiche commerciali tradizionali che tramite moderni canali digitali.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Strategic Vision -->
+                    <div class="card glass-card vision-card-right scroll-animate">
+                        <div class="vision-icon-top">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3>Visione Strategica</h3>
+                        <p>
+                            FL ENERGY intende consolidare la propria presenza nel mercato nazionale delle forniture tecnologiche, puntando sull'espansione e sul rafforzamento del comparto fotovoltaico e delle energie rinnovabili.
+                        </p>
+                        
+                        <!-- Mini Checklist of Objectives -->
+                        <ul class="vision-objectives">
+                            <li><i class="fa-solid fa-check-double text-secondary"></i> Ampliamento continuo della rete commerciale</li>
+                            <li><i class="fa-solid fa-check-double text-secondary"></i> Sviluppo di solide partnership industriali e finanziarie</li>
+                            <li><i class="fa-solid fa-check-double text-secondary"></i> Offerta di servizi finanziari innovativi come il noleggio LED Wall</li>
+                            <li><i class="fa-solid fa-check-double text-secondary"></i> Crescita del portafoglio clienti e dei volumi distributivi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Finanziaria Info Section -->
+        <section class="section bg-light-alt text-center py-5">
+            <div class="container">
+                <div class="partnership-container scroll-animate">
+                    <span class="badge">Partnering for Growth</span>
+                    <h2 class="mt-2">Partnership Finanziaria Strategica</h2>
+                    <p class="max-w-2xl mx-auto my-3 text-muted">
+                        L'accreditamento presso primarie società finanziarie ci permette di supportare al meglio la crescita commerciale dei nostri clienti. Offriamo soluzioni di noleggio operativo con riscatto finale e servizi finanziari su misura, ideali per agevolare l'acquisizione di impianti tecnologici complessi come i LED WALL.
+                    </p>
+                    <div class="partnership-badges">
+                        <span class="p-badge"><i class="fa-solid fa-chart-line"></i> Noleggio Operativo</span>
+                        <span class="p-badge"><i class="fa-solid fa-hand-holding-dollar"></i> Finanziamenti Personalizzati</span>
+                        <span class="p-badge"><i class="fa-solid fa-shield-heart"></i> Dilazione e Riscatto</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatti Section (With Form & Mapped info) -->
+        <section id="contatti" class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Entra in Contatto</span>
+                    <h2 class="section-title">Contattaci</h2>
+                    <p class="section-description">
+                        Richiedi un preventivo di fornitura, una consulenza tecnica o informazioni sulle nostre partnership commerciali.
+                    </p>
+                </div>
+
+                <div class="grid grid-2 contatti-grid">
+                    <!-- Left: Contact Details and Info -->
+                    <div class="contact-info-panel scroll-animate">
+                        <div class="card glass-card contact-detail-card">
+                            <h3>Informazioni di Contatto</h3>
+                            
+                            <div class="contact-list">
+                                <a href="mailto:flenergysrls@gmail.com" class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <span class="label">Email Commerciale</span>
+                                        <span class="value">flenergysrls@gmail.com</span>
+                                    </div>
+                                </a>
+
+                                <a href="mailto:flenergysrls@pec.it" class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <span class="label">PEC (Posta Elettronica Certificata)</span>
+                                        <span class="value">flenergysrls@pec.it</span>
+                                    </div>
+                                </a>
+
+                                <div class="contact-item">
+                                    <div class="contact-item-icon">
+                                        <i class="fa-solid fa-map-pin"></i>
+                                    </div>
+                                    <div class="contact-item-text">
+                                        <span class="label">Sede Legale & Uffici</span>
+                                        <span class="value">Piazzale Kennedy, 5 - 87036 Rende (CS)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stylized Mock Map / Visual representation -->
+                        <div class="card glass-card map-mockup scroll-animate">
+                            <div class="map-placeholder">
+                                <i class="fa-solid fa-earth-europe map-globe-icon"></i>
+                                <span>Rende (CS), Italia</span>
+                                <small>Piazzale Kennedy, 5</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Modern Form -->
+                    <div class="card glass-card contact-form-card scroll-animate">
+                        <h3>Invia un Messaggio</h3>
+                        <form id="contact-form" class="modern-form">
+                            <div class="form-group">
+                                <label for="name">Nome / Azienda</label>
+                                <input type="text" id="name" name="name" required placeholder="Inserisci il tuo nome o ragione sociale">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Indirizzo Email</label>
+                                <input type="email" id="email" name="email" required placeholder="esempio@dominio.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefono (opzionale)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Inserisci il numero di telefono">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Messaggio / Richiesta</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Descrivi brevemente la tua richiesta o fornitura"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                <span>Invia Richiesta</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="form-feedback" class="form-feedback hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bottom">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo-row">
+                    <span class="logo-text">FL ENERGY SRLS</span>
+                </div>
+                <p>Commercializzazione e intermediazione commerciale nel settore energetico, elettrico e fotovoltaico.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 FL ENERGY SRLS. Tutti i diritti riservati. Sede Legale: Rende (CS) | Capitale Sociale i.v. | P.IVA in CCIAA</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Termini di Servizio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
