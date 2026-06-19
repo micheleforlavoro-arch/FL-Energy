@@ -177,15 +177,27 @@ a {
 }
 
 .main-logo-img {
-    height: 55px;
+    height: 60px;
     width: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: var(--transition-smooth);
 }
 
 .main-logo-img:hover {
     transform: scale(1.05);
+}
+
+.hero-logo-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    filter: drop-shadow(0 15px 30px rgba(59, 130, 246, 0.25));
+    transition: var(--transition-smooth);
+}
+
+.hero-logo-img:hover {
+    transform: translateY(-5px);
 }
 
 .nav-menu {
