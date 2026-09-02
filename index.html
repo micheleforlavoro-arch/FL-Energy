@@ -32,6 +32,7 @@
                 <a href="#hero" class="nav-link active">Home</a>
                 <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
                 <a href="#settori" class="nav-link">Settori</a>
+                <a href="#led-wall" class="nav-link">LED Wall</a>
                 <a href="#punti-forza" class="nav-link">Punti di Forza</a>
                 <a href="#contatti" class="nav-link">Contatti</a>
             </nav>
@@ -84,15 +85,15 @@
                     </div>
                 </div>
                 <div class="hero-visual fade-in-right">
-                    <div class="visual-card">
-                        <img src="Logo AG completo.jpg" alt="AG Technology Logo Completo" class="hero-logo-img">
-                        <a href="#led-wall" class="floating-badge badge-1 scroll-animate" style="top: -20px; right: -20px; text-decoration: none; cursor: pointer; transition: transform 0.3s; z-index: 10;">
+                    <div class="visual-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 1.5rem;">
+                        <a href="#led-wall" class="floating-badge badge-1 scroll-animate" style="position: relative; top: 0; right: 0; margin-bottom: 2rem; display: inline-flex; text-decoration: none; cursor: pointer; transition: transform 0.3s; z-index: 10;">
                             <div class="badge-icon"><i class="fa-solid fa-tv"></i></div>
                             <div class="badge-text">
                                 <span class="badge-title">LED WALL</span>
                                 <span class="badge-desc">Scopri i vantaggi</span>
                             </div>
                         </a>
+                        <img src="Logo AG completo.jpg" alt="AG Technology Logo Completo" class="hero-logo-img">
                     </div>
                 </div>
             </div>
@@ -188,9 +189,8 @@
                 <div class="filter-container">
                     <button class="filter-btn active" data-filter="all">Tutti i Settori</button>
                     <button class="filter-btn" data-filter="energia">Energia & Fotovoltaico</button>
-                    <button class="filter-btn" data-filter="elettrico">Materiale Elettrico</button>
                     <button class="filter-btn" data-filter="impiantistica">Impiantistica</button>
-                    <button class="filter-btn" data-filter="edilizia">Edilizia & Altro</button>
+                    <button class="filter-btn" data-filter="ledwall">LED Wall</button>
                 </div>
 
                 <!-- Sector Cards Grid -->
@@ -216,7 +216,7 @@
                     </div>
 
                     <!-- Card 3: Special LED WALL -->
-                    <div class="card sector-card special-card scroll-animate" data-category="edilizia">
+                    <div class="card sector-card special-card scroll-animate" data-category="ledwall">
                         <div class="sector-icon">
                             <i class="fa-solid fa-tv"></i>
                         </div>
@@ -324,10 +324,15 @@
                         <h4 style="font-size: 1rem;">Centri Commerciali</h4>
                         <p style="font-size: 0.85rem; line-height: 1.4;">Comunica in modo immediato e cattura l'attenzione.</p>
                     </div>
-                    <div class="card scroll-animate text-center" style="padding: 1.5rem 1rem; grid-column: 1 / -1; max-width: 300px; margin: 0 auto;">
+                    <div class="card scroll-animate text-center" style="padding: 1.5rem 1rem;">
                         <i class="fa-solid fa-building" style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.8rem;"></i>
                         <h4 style="font-size: 1rem;">Attività Professionali</h4>
                         <p style="font-size: 0.85rem; line-height: 1.4;">Rafforza il tuo brand e comunica i tuoi servizi.</p>
+                    </div>
+                    <div class="card scroll-animate text-center" style="padding: 1.5rem 1rem;">
+                        <i class="fa-solid fa-calendar-check" style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 0.8rem;"></i>
+                        <h4 style="font-size: 1rem;">Eventi & Fiere</h4>
+                        <p style="font-size: 0.85rem; line-height: 1.4;">Crea un forte impatto visivo in occasioni speciali e fiere.</p>
                     </div>
                 </div>
 
