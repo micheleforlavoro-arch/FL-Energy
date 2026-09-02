@@ -956,6 +956,8 @@ a.contact-item:hover .contact-item-icon {
 .contact-item-text {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    min-width: 0;
 }
 
 .contact-item-text .label {
@@ -969,6 +971,9 @@ a.contact-item:hover .contact-item-icon {
     font-family: var(--font-primary);
     font-weight: 600;
     color: var(--text-title);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 /* Stylized Map Mockup */
