@@ -1244,6 +1244,11 @@ a.contact-item:hover .contact-item-icon {
         grid-template-columns: 1fr;
     }
     
+    .grid-3.grid-mobile-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
