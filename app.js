@@ -188,7 +188,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // ---------------------------------------------------------
 // 7. COPY TO CLIPBOARD HELPER
 // ---------------------------------------------------------
-window.copyToClipboard = function(text, element) {
+window.handleContactClick = function(event, text, element) {
+    // Se siamo da mobile, lasciamo che il click faccia il suo corso normale (mailto o tel)
+    if (window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent)) {
+        return true;
+    }
+    
+    // Su desktop, blocchiamo l'apertura e copiamo il testo
+    event.preventDefault();
     navigator.clipboard.writeText(text).then(() => {
         const originalText = element.innerHTML;
         element.innerHTML = '<div class="contact-item-text" style="color: var(--primary-color); font-weight: bold; width: 100%; text-align: center;">Copiato negli appunti!</div>';
