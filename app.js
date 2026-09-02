@@ -184,3 +184,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// ---------------------------------------------------------
+// 7. COPY TO CLIPBOARD HELPER
+// ---------------------------------------------------------
+window.copyToClipboard = function(text, element) {
+    navigator.clipboard.writeText(text).then(() => {
+        const originalText = element.innerHTML;
+        element.innerHTML = '<div class="contact-item-text" style="color: var(--primary-color); font-weight: bold; width: 100%; text-align: center;">Copiato negli appunti!</div>';
+        setTimeout(() => {
+            element.innerHTML = originalText;
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+};

@@ -1284,7 +1284,7 @@ a.contact-item:hover .contact-item-icon {
 
 .marquee-content {
     display: flex;
-    animation: scrollBanner 15s linear infinite;
+    animation: scrollBanner 30s linear infinite;
 }
 
 .marquee-text {
