@@ -19,22 +19,22 @@
     --bg-card: rgba(15, 23, 42, 0.6);
     --bg-card-hover: rgba(30, 41, 59, 0.8);
     
-    --primary-color: #3b82f6;
-    --primary-hover: #2563eb;
-    --secondary-color: #10b981;
-    --secondary-hover: #059669;
+    --primary-color: #21658e;
+    --primary-hover: #1a5071;
+    --secondary-color: #8bb634;
+    --secondary-hover: #4f7f33;
     
-    --text-title: #f8fafc;
+    --text-title: #ffffff;
     --text-body: #94a3b8;
     --text-muted: #64748b;
     --border-color: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(59, 130, 246, 0.3);
+    --border-hover: rgba(33, 101, 142, 0.3);
     
-    --glow-color-1: rgba(59, 130, 246, 0.15);
-    --glow-color-2: rgba(16, 185, 129, 0.15);
+    --glow-color-1: rgba(33, 101, 142, 0.15);
+    --glow-color-2: rgba(139, 182, 52, 0.15);
     
     --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    --card-shadow-hover: 0 20px 40px -15px rgba(59, 130, 246, 0.2);
+    --card-shadow-hover: 0 20px 40px -15px rgba(33, 101, 142, 0.2);
 }
 
 /* Light Theme */
@@ -44,22 +44,22 @@
     --bg-card: rgba(255, 255, 255, 0.8);
     --bg-card-hover: rgba(255, 255, 255, 0.95);
     
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --secondary-color: #059669;
-    --secondary-hover: #047857;
+    --primary-color: #21658e;
+    --primary-hover: #1a5071;
+    --secondary-color: #4f7f33;
+    --secondary-hover: #8bb634;
     
     --text-title: #0f172a;
     --text-body: #475569;
     --text-muted: #64748b;
     --border-color: rgba(15, 23, 42, 0.08);
-    --border-hover: rgba(37, 99, 235, 0.3);
+    --border-hover: rgba(33, 101, 142, 0.3);
     
-    --glow-color-1: rgba(37, 99, 235, 0.08);
-    --glow-color-2: rgba(5, 150, 105, 0.08);
+    --glow-color-1: rgba(33, 101, 142, 0.08);
+    --glow-color-2: rgba(79, 127, 51, 0.08);
     
     --card-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
-    --card-shadow-hover: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+    --card-shadow-hover: 0 20px 40px -15px rgba(33, 101, 142, 0.15);
 }
 
 /* Reset & Base Styles */
@@ -1260,5 +1260,54 @@ a.contact-item:hover .contact-item-icon {
     
     .btn-header {
         display: none;
+    }
+}
+
+/* ==========================================================================
+   SCROLLING BANNER (MARQUEE)
+   ========================================================================== */
+.quote-banner {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+    padding: 12px 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    z-index: 50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quote-banner:hover {
+    cursor: pointer;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scrollBanner 15s linear infinite;
+}
+
+.marquee-text {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.marquee-text i {
+    font-size: 1rem;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }

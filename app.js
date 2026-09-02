@@ -183,48 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---------------------------------------------------------
-    // 7. CONTACT FORM SUBMISSION WITH SIMULATED FEEDBACK
-    // ---------------------------------------------------------
-    const contactForm = document.getElementById('contact-form');
-    const formFeedback = document.getElementById('form-feedback');
-    const submitBtn = document.getElementById('submit-btn');
-    
-    if (contactForm && formFeedback && submitBtn) {
-        const submitBtnText = submitBtn.querySelector('span');
-        const submitBtnIcon = submitBtn.querySelector('i');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Disable submit button and show loader
-            submitBtn.disabled = true;
-            if (submitBtnText) submitBtnText.textContent = 'Invio in corso...';
-            if (submitBtnIcon) submitBtnIcon.className = 'fa-solid fa-circle-notch fa-spin';
-            
-            // Hide previous feedback
-            formFeedback.className = 'form-feedback hidden';
-            
-            // Simulate Server API Request delay (1.5 seconds)
-            setTimeout(() => {
-                const formData = new FormData(contactForm);
-                const userName = formData.get('name');
-                
-                // Basic success simulation
-                formFeedback.textContent = `Grazie ${userName}, la tua richiesta è stata inviata con successo! Ti risponderemo a breve.`;
-                formFeedback.className = 'form-feedback success';
-                
-                // Reset form fields
-                contactForm.reset();
-                
-                // Restore button state
-                submitBtn.disabled = false;
-                if (submitBtnText) submitBtnText.textContent = 'Invia Richiesta';
-                if (submitBtnIcon) submitBtnIcon.className = 'fa-solid fa-paper-plane';
-                
-                // Scroll feedback into view
-                formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 1500);
-        });
-    }
 });
